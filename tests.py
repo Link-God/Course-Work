@@ -15,14 +15,10 @@ b_for_ex = [
         ]
 
 class TestStringMethods(unittest.TestCase):
-  def test_init(self):
-    g = Game.Computer()
-    self.assertEqual(g.player_counter, 0)
-  
-      def test_one(self):
+    def test_init(self):
         g = Game.Computer()
         self.assertEqual(g.player_counter, 0)
-
+  
     def test_receive_shot(self):
         success1, c11, c12 = Game.receive_shot('a1')
         success2, _, _ = Game.receive_shot('t5')
