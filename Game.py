@@ -228,7 +228,7 @@ class Computer:
         :return: True - при попадании. False - при промахе или при попадании в уже подбитый корабль.
         """
         if self.player_ships[1] == 0:
-            iff self.player_ships[2] == 0:
+            if self.player_ships[2] == 0:
                 self.strategy = 2
             else:
                 self.strategy = 1
