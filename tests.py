@@ -104,7 +104,16 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(count, (1 * 4 + 2 * 3 + 3 * 2 + 4 * 1))
 
     def test_player_shot(self):
-        pass
+        g = Game.Computer()
+        g.alice_board = b_for_ex
+        success, c1, c2 = Game.receive_shot('j9')
+        self.assertTrue(success)
+        self.assertTrue(g.player_shot(c1, c2))
+        self.assertEqual(g.alice_board[8][9], -1)
+        success, c1, c2 = Game.receive_shot('j1')
+        self.assertTrue(success)
+        self.assertFalse(g.player_shot(c1, c2))
+        self.assertEqual(g.alice_board[0][9], 2)
 
 
 if __name__ == '__main__':
