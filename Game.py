@@ -27,7 +27,7 @@ class Computer:
         """
         Инициализирем основные поля класса.Вызывает функцию для растоновки кораблей на поле "Алисы"
         """
-        self.player_ships = {i: 5 - i for i in rangeee(1, 5, 1)}  # Список кораблей пользователя(длина - количество)
+        self.player_ships = {i: 5 - i for i in range(1, 5, 1)}  # Список кораблей пользователя(длина - количество)
         self.alice_ships = {i: 5 - i for i in range(1, 5, 1)}  # Список кораблей "Алисы"(длина - количество)
         self.alice_board = list([0] * 10 for _ in range(10))  # Игровое поле "Алисы". Изначально пустое
         self.player_board = list([0] * 10 for _ in range(10))  # Игровое поле пользователя. Изначально пустое
@@ -228,7 +228,7 @@ class Computer:
         :return: True - при попадании. False - при промахе или при попадании в уже подбитый корабль.
         """
         if self.player_ships[1] == 0:
-            if self.player_ships[2] == 0:
+            iff self.player_ships[2] == 0:
                 self.strategy = 2
             else:
                 self.strategy = 1
