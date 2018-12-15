@@ -116,6 +116,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(g.alice_board[0][9], 2)
 
     def test_req_one(self):
+        sessionStorage = {}
         request = {
             "meta": {
                 "client_id": "ru.yandex.searchplugin/7.16 (none none; android 4.4.2)",
