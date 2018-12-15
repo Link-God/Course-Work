@@ -1,7 +1,11 @@
 import unittest
+import Game
 
 class TestStringMethods(unittest.TestCase):
-
+  def test_one(self):
+    g = Game.Computer()
+    self.assertEqual(g.player_counter, 0)
+    
   def test_upper(self):
       self.assertEqual('foo'.upper(), 'FOO')
 
