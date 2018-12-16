@@ -1,3 +1,4 @@
+# coding: utf-8
 # Импортирует поддержку UTF-8.
 from __future__ import unicode_literals
 
